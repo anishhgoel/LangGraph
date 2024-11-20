@@ -2,7 +2,10 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import MessagesState
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+print(os.getenv("YOUR_ENV_VARIABLE"))
 # Tool
 def multiply(a: int, b: int) -> int:
     """Multiplies a and b.
